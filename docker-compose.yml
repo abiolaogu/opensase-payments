@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  payments:
+    build: .
+    ports:
+      - "8084:8084"
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/payments
+      - NATS_URL=nats://nats:4222
+      - RUST_LOG=debug
+      - PORT=8084
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - payments-network
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=payments
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - payments-network
+
+  nats:
+    image: nats:2.10-alpine
+    command: ["--js"]
+    networks:
+      - payments-network
+
+volumes:
+  postgres_data:
+
+networks:
+  payments-network:
+    driver: bridge
