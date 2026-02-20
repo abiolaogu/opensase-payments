@@ -1,0 +1,11 @@
+tenant: billyronks
+namespace: opensase-payments
+topics:
+  - name: persistent://billyronks/opensase-payments/command
+    partitions: 6
+  - name: persistent://billyronks/opensase-payments/event
+    partitions: 6
+  - name: persistent://billyronks/opensase-payments/audit
+    partitions: 6
+  - name: persistent://billyronks/global/observability
+    partitions: 6
