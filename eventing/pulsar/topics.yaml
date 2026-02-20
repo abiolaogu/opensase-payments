@@ -1,0 +1,11 @@
+tenant: billyronks
+namespace: extract-payments
+topics:
+  - name: persistent://billyronks/extract-payments/command
+    partitions: 6
+  - name: persistent://billyronks/extract-payments/event
+    partitions: 6
+  - name: persistent://billyronks/extract-payments/audit
+    partitions: 6
+  - name: persistent://billyronks/global/observability
+    partitions: 6
