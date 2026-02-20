@@ -1,0 +1,11 @@
+pulsar:
+  broker_url: pulsar://pulsar-broker.pulsar.svc.cluster.local:6650
+  http_url: http://pulsar-broker.pulsar.svc.cluster.local:8080
+  tenant: billyronks
+  namespace: extract-payments
+  producers:
+    - topic: persistent://billyronks/extract-payments/command
+    - topic: persistent://billyronks/extract-payments/event
+  consumers:
+    - topic: persistent://billyronks/extract-payments/audit
+      subscription: extract-payments-svc-sub
