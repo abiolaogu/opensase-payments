@@ -1,7 +1,7 @@
 # COMPLIANCE.md
 
 ## Scope
-Repository `opensase-payments` mapped to controls for SOC2, HIPAA, and PCI-DSS where applicable.
+Repository `extract-payments` mapped to controls for SOC2, HIPAA, and PCI-DSS where applicable.
 
 ## Control Mapping
 | Control Family | Implementation in Repo |

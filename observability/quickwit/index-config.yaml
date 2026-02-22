@@ -1,6 +1,6 @@
 version: 0.8
-index_id: logs-opensase-payments
-index_uri: s3://quickwit-index/logs-opensase-payments
+index_id: logs-extract-payments
+index_uri: s3://quickwit-index/logs-extract-payments
 doc_mapping:
   field_mappings:
     - name: timestamp

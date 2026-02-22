@@ -1,12 +1,12 @@
 # PERFORMANCE
 
 ## Phase 2 Deep Audit Snapshot
-- Repo: /Users/AbiolaOgunsakin1/opensase-migration/repos/opensase-payments
+- Repo: /Users/AbiolaOgunsakin1/opensase-migration/extract-payments
 - Vertical: FinTech
 - Primary Language: Rust
-- Heuristic Risk Score: 31 (low)
+- Heuristic Risk Score: 25 (low)
 - Potential Polling References: 25
-- Potential N+1 / inefficient query references: 6
+- Potential N+1 / inefficient query references: 0
 - Potential Sync I/O references: 0
 - Potential CPU hot-path indicators: 0
 

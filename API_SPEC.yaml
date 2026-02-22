@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: opensase-payments Service API
+  title: extract-payments Service API
   version: 1.0.0
   description: Standardized API contract for the Billyronks ecosystem.
 servers:
@@ -24,7 +24,7 @@ paths:
               properties:
                 topic:
                   type: string
-                  example: persistent://billyronks/opensase-payments/event
+                  example: persistent://billyronks/extract-payments/event
                 payload:
                   type: object
       responses:

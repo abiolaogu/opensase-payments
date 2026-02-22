@@ -1,7 +1,7 @@
 # PLAN.md
 
 ## Repo
-- Name: `opensase-payments`
+- Name: `extract-payments`
 - Vertical: `FinTech`
 - Core language: `Rust`
 - Benchmark targets: `Stripe, Adyen`
@@ -38,9 +38,9 @@ Use the repository's actual domain model, preserve existing design language, and
 ## Phase 2 Sovereign Execution
 
 ### Deep Audit Findings
-- Risk score: 31 (low)
+- Risk score: 25 (low)
 - Polling refs: 25
-- N+1 refs: 6
+- N+1 refs: 0
 - Sync IO refs: 0
 - CPU hot refs: 0
 
